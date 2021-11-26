@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".ContadorActivity">
+
+    <!--Debería haber agrupado bContador1, el texto, el editText incremento y la imagen en una view
+    y hacer lo mismo con los valores de contador2, y así tener dos bloques y con esos hacer una cadena
+    vertical hasta la guideline. Así podría pegar cada incremento más a cada boton contador
+    y dejar más espacio entre views, pero no me ha dado tiempo-->
+
+    <Button
+        android:id="@+id/bContador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTADOR 1"
+
+        app:layout_constraintBottom_toTopOf="@+id/tvIncremento1"
+        app:layout_constraintEnd_toStartOf="@+id/tvContador1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvContador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/bContador1"
+        app:layout_constraintEnd_toStartOf="@+id/iwDelContador1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bContador1"
+        app:layout_constraintTop_toTopOf="@+id/bContador1" />
+
+    <EditText
+        android:id="@+id/etIncremento1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:lineHeight="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvIncremento1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvIncremento1"
+        app:layout_constraintTop_toTopOf="@+id/tvIncremento1" />
+
+    <ImageView
+        android:id="@+id/iwDelContador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/bContador1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvContador1"
+        app:layout_constraintTop_toTopOf="@+id/bContador1"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <Button
+        android:id="@+id/bContador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTADOR 2"
+
+        app:layout_constraintBottom_toTopOf="@+id/tvIncremento2"
+        app:layout_constraintEnd_toStartOf="@+id/tvContador2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIncremento1" />
+
+    <TextView
+        android:id="@+id/tvContador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/bContador2"
+        app:layout_constraintEnd_toStartOf="@+id/iwDelContador2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bContador2"
+        app:layout_constraintTop_toTopOf="@+id/bContador2" />
+
+    <EditText
+        android:id="@+id/etIncremento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:lineHeight="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvIncremento2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toEndOf="@+id/tvIncremento2"
+        app:layout_constraintTop_toTopOf="@+id/tvIncremento2"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <ImageView
+        android:id="@+id/iwDelContador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/bContador2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvContador2"
+        app:layout_constraintTop_toTopOf="@+id/bContador2"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <ImageView
+        android:id="@+id/ivDelGlobal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGlobal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGlobalNumero"
+        app:layout_constraintTop_toTopOf="@+id/tvGlobal"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/tvGlobal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Global "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGlobalNumero"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/tvGlobalNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGlobal"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelGlobal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGlobal"
+        app:layout_constraintTop_toTopOf="@+id/tvGlobal" />
+
+   <TextView
+        android:id="@+id/tvIncremento1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incremento:"
+        app:layout_constraintBottom_toTopOf="@+id/bContador2"
+        app:layout_constraintStart_toStartOf="@+id/bContador1"
+        app:layout_constraintTop_toBottomOf="@+id/bContador1" />
+
+    <TextView
+        android:id="@+id/tvIncremento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incremento:"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/bContador2"
+        app:layout_constraintTop_toBottomOf="@+id/bContador2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
